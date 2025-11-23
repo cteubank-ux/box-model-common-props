@@ -343,6 +343,12 @@ a {
 .container {
   text-align: center;
 }
+p {
+  font-size: 1.1rem;
+}
+.my-bold-text {
+  font-weight: bold;
+}
 /* For the first link in this section: */
 #section2 a:first-of-type{
     background-color: var(--lt-blue);
