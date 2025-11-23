@@ -349,6 +349,12 @@ p {
 .my-bold-text {
   font-weight: bold;
 }
+my-container .my-link {
+  width: 50%;
+}
+.large-shadow-element {
+  box-shadow: 0 10px 30px 10px rgba(0, 0, 0, 0.3);
+}
 /* For the first link in this section: */
 #section2 a:first-of-type{
     background-color: var(--lt-blue);
