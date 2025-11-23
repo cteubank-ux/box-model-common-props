@@ -397,8 +397,18 @@ my-container .my-link {
             - left: 60px
 */
 #section2 div > p:last-of-type{
-    
+  background-color: rgba(0, 128, 128, 0.5); /* Example teal-rgba, adjust alpha as needed */
+  border: 4px dashed darkgray;
+  margin-top: 16px;
+  margin-right: 60px;
+  margin-bottom: 32px;
+  margin-left: 8px;
+  padding-top: 32px;
+  padding-right: 8px;
+  padding-bottom: 16px;
+  padding-left: 60px;
 }
+
 
  /* For the div wrapped around that paragraph to show the space its taking up within its container */
 #section2 div{
@@ -414,8 +424,12 @@ my-container .my-link {
         - add the small box shadow, using the variable in the root
 */
 #section2 a:first-of-type:hover{
-
+  background-color: var(--dk-blue);
+  color: white;
+  border-color: var(--lt-blue);
+  box-shadow: var(--small-box-shadow);
 }
+
 
 #section2 a:last-of-type:hover{
     background-color: var(--lt-blue);
@@ -437,8 +451,13 @@ my-container .my-link {
         - add margin to center this element
         - add the small filter drop shadow from the CSS variables in the root
 */
-#section3 img{
     
+#section3 img{
+  display: block; /* Turns the image into a block-level element */
+  width: 200px; /* Sets the width of the image to 200px */
+  height: auto; /* Sets the height to automatically adjust based on the width to maintain aspect ratio */
+  margin: 0 auto; /* Adds margin to center the element horizontally */
+  filter: var(--small-filter-drop-shadow); /* Applies a small filter drop shadow using a CSS variable */
 }
 
 #section3 div::before{
@@ -480,7 +499,18 @@ my-container .my-link {
         - move this to the right from its original location by 25px
 */
 #section3 div::after{
+  content: ""; /* Add content (empty string) */
+  display: block; /* Make this display as a block-level element */
+  width: 50px; /* Make this 50px wide */
+  height: 50px; /* Make this 50px tall */
+  background-color: lightblue; /* Make the background the lt-blue color (assuming 'lightblue' is the desired color) */
+  border-radius: 50%; /* Turn this square div into a circle */
+  position: relative; /* Set the position to relative */
+  z-index: 2; /* Give this a z-index of 2 */
+  top: -50px; /* Move this up from its original location by 50px */
+  left: 25px; /* Move this to the right from its original location by 25px */
 }
+
 
 
 /* ------------- SECTION 4 STYLES ---------------- */
@@ -500,9 +530,15 @@ my-container .my-link {
             - bottom: 1rem
             - left: 0
 */
-#section4 p:last-of-type{
 
+#section4 p:last-of-type{
+  margin-top: 1rem;
+  margin-right: 0;
+  margin-bottom: 1rem;
+  margin-left: 0;
 }
+
+
 
 /* ------------- SECTION 5 STYLES ---------------- */
 /* Background image default behavior */
@@ -537,8 +573,11 @@ my-container .my-link {
         - center the image pattern in the container
         - add the puppy-photo as a repeating background to the container
 */
-#bg-img-3{
-    
+#bg-img-3 {
+  background-color: lightblue; /* or a specific hex code for lt-blue */
+  background-image: url('puppy-photo.jpg'); /* Replace 'puppy-photo.jpg' with the actual path to your image */
+  background-repeat: repeat;
+  background-position: center center;
 }
 
 /* For the fourth div, let's style this like the second div, but let's change the height of the div to 100px, so it fits the height of the image. It will make it look like the image and div are the same height */
@@ -564,8 +603,10 @@ my-container .my-link {
         - scale the background image to 110% 
         - add the wood background texture from the images folder
 */
-#pattern1{
-    
+#pattern1 {
+  background-color: lightgray;
+  background-image: url('images/wood-texture.jpg'); /* Replace 'wood-texture.jpg' with the actual filename if different */
+  background-size: 110%;
 }
 
 /* For the second div, the pattern is from from Hero Pattern. These actually give you SVG code to paste into your CSS */
@@ -622,7 +663,7 @@ my-container .my-link {
         - float the image to the right
 */
 #dog-house{
-    
+    float: right;
 }
 
 /* When you use floats, you have to be sure to clear them so that the rest of your page after the floats displays normally. Let's use the display section to clear the floats (because it is the next tag outside of our container in the HTML) */
@@ -631,6 +672,9 @@ my-container .my-link {
         - clear any floats
 */
 #section9{
+    .clear-element {
+  clear: both; /* Clears both left and right floats */
+}
     
 }
 
