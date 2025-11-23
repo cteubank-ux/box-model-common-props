@@ -334,7 +334,9 @@ footer{
         - add the large box shadow
 */
 /* ADD SELECTOR AND STYLES HERE */
-
+a {
+  display: block;
+}
 /* For the first link in this section: */
 #section2 a:first-of-type{
     background-color: var(--lt-blue);
