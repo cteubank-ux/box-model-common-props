@@ -340,6 +340,9 @@ a {
 a {
   text-decoration: none;
 }
+.container {
+  text-align: center;
+}
 /* For the first link in this section: */
 #section2 a:first-of-type{
     background-color: var(--lt-blue);
